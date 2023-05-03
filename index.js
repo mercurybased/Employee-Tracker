@@ -212,7 +212,7 @@ async function updateEmployee() {
   await db
     .promise()
     .query(
-      `INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES ('${ans.first_name}','${ans.last_name}', ${ans.role_id}, ${ans.manager_id})`
+      `UPDATE employee SET role_id = ${ans.role} WHERE id = ${ans.employee}`
     );
   viewAllEmployees();
 }
