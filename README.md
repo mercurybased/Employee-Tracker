@@ -30,6 +30,7 @@ run `node index` and follow the prompts given
 For use in your company database
 
 ## Screenshots
+<img width="378" alt="image" src="https://user-images.githubusercontent.com/127552050/235837440-6bc3a666-5337-40e6-9948-c689aef3d26b.png">
 
 
 ## Credits
