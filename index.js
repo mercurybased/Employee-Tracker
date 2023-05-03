@@ -171,17 +171,17 @@ async function addRole() {
             type: "list",
             name: "department",
             message: "What department is the new role in?",
-      choices: departments.map(({ title, salary, department_id }) => ({
-        name: title,
-        name: salary,
-        value:department_id
+      choices: departments.map(({ name, id }) => ({
+        name: name,
+        value:id,
       })),
     },
   ]);
   console.log(ans);
   await db
     .promise()
-    .query(`INSERT INTO role (title,salary,department_id) VALUES ('${ans.title}', ${ans.salary}', '${ans.department_id}')`);
+    .query(`INSERT INTO role (title,salary,department_id) VALUES ('${ans.title}', '${ans.salary}', '${ans.department}')`
+    );
   viewAllRoles();
 }
 
